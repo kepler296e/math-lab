@@ -38,8 +38,12 @@ plt.ylabel("Count")
 plt.title(f"Digit Counts in the First {N_values[-1]} Digits of Pi")
 plt.show()
 """
-
 """
+with open("constants/pi.txt", "r") as file:
+    pi_digits = file.read().strip()
+
+pi_digits = pi_digits[:100000]
+
 # Calculate the dimensions of the image based on the number of digits
 total_digits = len(pi_digits)
 width = int(math.sqrt(total_digits))
@@ -59,5 +63,5 @@ for i, digit in enumerate(pi_digits):
     image.putpixel((x, y), (r, g, b))
 
 # Save the image
-image.save("pi.png")
+image.save("images/pi.png")
 """
