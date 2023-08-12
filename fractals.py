@@ -23,7 +23,7 @@ def julia(x, y, c, max_iterations):
 
 width = 1000
 height = 1000
-max_iterations = 50
+max_iterations = 40
 
 real_range = [(-2, 1), (-1.5, 1.5)]
 imag_range = [(-1, 1), (-1.5, 1.5)]
@@ -32,7 +32,7 @@ julia_c = complex(-0.62772, -0.42193)
 
 img = np.zeros((2, height, width))
 
-k = 1
+k = 0
 # for k in range(2):
 for i in range(height):
     for j in range(width):
@@ -75,7 +75,7 @@ ax1.set_ylabel("Imaginary")
 ax1.grid(False)
 
 # Plot a zoomed-in view in the second subplot
-zoom_real = (-2, -1)
+zoom_real = (-1.6, -0.6)
 zoom_imag = (-0.4, 0.4)
 zoom_img = img[0][
     int(

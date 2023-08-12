@@ -14,7 +14,8 @@ for const_name, const_value in constants.items():
     differences = []
     for p in precision:
         counts = [const_digits[:p].count(str(digit)) for digit in digits]
-        diff = (np.max(counts) - np.min(counts)) / (p / 10)
+        avg = np.average(counts)
+        diff = np.sum(np.abs(counts - avg)) / (p / 10)
         differences.append(diff)
 
     plt.plot(precision, differences, label=const_name)
