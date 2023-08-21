@@ -1,6 +1,6 @@
 # Math Lab
-### Mathematical Functions and Visualizations in Python
-Welcome to Math Lab! I hope you enjoy this collection of mathematical functions and visualizations. I will be adding more functions and visualizations in the future. If you have any suggestions, please let me know.
+### Mathematical Explorations in Python: Visualizing Fractals, Complex Roots, and Irrational Numbers
+I hope you enjoy this as much as I did.
 
 $$e^{i \pi} + 1 = 0$$
 
@@ -39,7 +39,7 @@ for k in range(n):
 [Click here to see the complete code](complex_roots.py)
 
 ### Mandelbrot Set
-The [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set) emerges from iteratively evaluating the equation $z_{n+1} = z_n^2 + c$ where $z$ is a complex number and $c$ is a constant. This operation is performed over and over again for each point in the complex plane. If the values of $z$ stay bounded during these iterations, the point is considered part of the Mandelbrot set; if they diverge, it's not.
+The [Mandelbrot set](https://en.wikipedia.org/wiki/Mandelbrot_set) emerges from the iterative evaluation of the equation $z_{n+1} = z_n^2 + c$ where $z$ is a complex number and $c$ is a constant. This operation is performed for each point in the complex plane. If the values of $z$ stay bounded during these iterations, the point is considered part of the set; if they diverge, it's not.
 
 <img src="images/mandel.png" width=50% height=50%>
 
@@ -55,7 +55,7 @@ def mandelbrot(c, max_iterations):
 [Complete code](fractals.py)
 
 ### Julia Set
-The [Julia set](https://en.wikipedia.org/wiki/Julia_set) is similar to the Mandelbrot set, but instead of iterating over the complex plane, it iterates over a single point $c$ while the other point $z$ is fixed. The Julia set is the set of points $c$ for which the sequence $z_{n+1} = z_n^2 + c$ does not diverge.
+The [Julia set](https://en.wikipedia.org/wiki/Julia_set), akin to the Mandelbrot set, arises from iteratively calculating the equation $z_{n+1} = z_n^2 + c$, where $z$ is a complex number and $c$ is a constant. However, in the Julia set, this computation is carried out for a fixed point $c$ while varying the initial complex number $z$. The resulting set is determined by whether the iterative values of $z$ remain bounded or diverge.
 
 <img src="images/julia.png" width=50% height=50%>
 
@@ -71,12 +71,12 @@ def julia(x, y, c, max_iterations):
 [Julia set complete code](fractals.py)
 
 ### Digit Distribution in Irrational Numbers
-Have you ever wondered how the digits of irrational numbers are distributed? Me neither, but when we dive into the realm of infinity, every digit appears to show up an equal number of times!
+Have you ever wondered how the digits of irrational numbers are distributed? Me neither, but apparently each digit appears the same amount of times! The following plots show how the difference between digit frecuencies converges to 0 as the number of decimals increases. This is just an empirical observation, I don't know if it's true for all irrational numbers.
 
 <img src="images/diffs.png" width=50% height=50%>
 <img src="images/pcount.png" width=50% height=50%>
 
-First 1M digits of pi.
+#### First 1 million digits of $\pi$
 
 <img src="images/pi.png">
 

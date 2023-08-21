@@ -6,7 +6,7 @@ angles = np.linspace(0, 2 * np.pi, N, endpoint=False)
 radii = np.arange(1, N + 1)
 
 ax = plt.subplot(111, polar=True)
-ax.set_title("Natural numbers in polar coordinates")
+ax.set_title("Natural Numbers in Polar Coordinates")
 
 for angle, radius in zip(angles, radii):
     color = plt.cm.viridis(radius / N)
